@@ -1,0 +1,867 @@
+[gd_scene load_steps=39 format=2]
+
+[ext_resource path="res://new_theme1.tres" type="Theme" id=1]
+[ext_resource path="res://fonts/Greathy 400.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://fonts/noto_sans_ui_bold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://fonts/noto_sans_ui_regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Images/ts7vuoswhwf41.webp" type="Texture" id=5]
+[ext_resource path="res://Scenes/Register/Register.gd" type="Script" id=6]
+[ext_resource path="res://Images/arrow-small-left.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/Flying_object/Flying_object.tscn" type="PackedScene" id=8]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_left = 5
+border_width_top = 5
+border_width_bottom = 5
+border_color = Color( 0.309804, 0.662745, 0.529412, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_right = 5
+border_color = Color( 0.309804, 0.662745, 0.529412, 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 49
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_top = 14
+border_color = Color( 0.8, 0.8, 0.8, 0 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 20
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 27
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_bottom = 30
+border_color = Color( 0.192157, 0.45098, 0.352941, 0.235294 )
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_bottom = 4
+border_color = Color( 0.309804, 0.662745, 0.529412, 1 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 46
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.309804, 0.662745, 0.529412, 1 )
+border_width_bottom = 10
+border_color = Color( 0.192157, 0.45098, 0.352941, 1 )
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.309804, 0.662745, 0.529412, 1 )
+border_width_bottom = 4
+border_color = Color( 0.192157, 0.45098, 0.352941, 1 )
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="DynamicFont" id=30]
+size = 22
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=31]
+bg_color = Color( 0, 0.360784, 0.294118, 0.121569 )
+border_width_bottom = 4
+border_color = Color( 0.192157, 0.45098, 0.352941, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+
+[sub_resource type="DynamicFont" id=13]
+size = 26
+font_data = ExtResource( 4 )
+
+[sub_resource type="Animation" id=14]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Title_label/Logo/Panel:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 77, 14 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Title_label/Logo/Panel:rect_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 10 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Title_label/Logo/Label:rect_size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 216, 55 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Title_label/Logo/Label:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Title_label/Logo/Label:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 45 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "logo_fade_in"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Title_label/Logo/Panel:rect_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 0.334645, 1.60092, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 10 ), Vector2( 144, 10 ), Vector2( 144, 161 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Title_label/Logo/Label:rect_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4, 0.7 ),
+"transitions": PoolRealArray( 1, 2.44501, 1 ),
+"update": 0,
+"values": [ Vector2( 216, 55 ), Vector2( 216, 55 ), Vector2( 403, 55 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Title_label/Logo/Label:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 23.0822, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "logo_lable_floating"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Title_label/Logo/Label:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 0.517142, 2.20865, 0.505718, 1.56768 ),
+"update": 0,
+"values": [ Vector2( 0, 45 ), Vector2( 0, 37 ), Vector2( 0, 45 ), Vector2( 0, 53 ) ]
+}
+
+[sub_resource type="Animation" id=17]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Password_lineEdit:rect_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 486, 48 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("RegNo_lineEdit:rect_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 486, 48 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Name_lineEdit:rect_size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 486, 48 ) ]
+}
+
+[sub_resource type="Animation" id=29]
+resource_name = "name_active"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Name_lineEdit:rect_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 486, 48 ), Vector2( 84, 48 ), Vector2( 486, 48 ) ]
+}
+
+[sub_resource type="Animation" id=18]
+resource_name = "pwd_active"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Password_lineEdit:rect_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 486, 48 ), Vector2( 84, 48 ), Vector2( 486, 48 ) ]
+}
+
+[sub_resource type="Animation" id=19]
+resource_name = "reg_active"
+tracks/0/type = "value"
+tracks/0/path = NodePath("RegNo_lineEdit:rect_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 486, 48 ), Vector2( 84, 48 ), Vector2( 486, 48 ) ]
+}
+
+[sub_resource type="Animation" id=20]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Register_button:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Register_button:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 189, 1372 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("RegNo_label:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -184, 564.5 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("RegNo_lineEdit:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -184, 624 ) ]
+}
+
+[sub_resource type="Animation" id=21]
+resource_name = "login_button_fade_in"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Register_button:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 0.8 ),
+"transitions": PoolRealArray( 1.45855, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Register_button:rect_position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 0.8 ),
+"transitions": PoolRealArray( 1.48282, 0.544295, 1.77658 ),
+"update": 0,
+"values": [ Vector2( 189, 1292 ), Vector2( 189, 978 ), Vector2( 189, 1028 ) ]
+}
+
+[sub_resource type="Animation" id=22]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("RegNo_label:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -184, 494.5 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("RegNo_lineEdit:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -184, 544.5 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Password_label:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -184, 780 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Password_lineEdit:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -184, 830 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Name_label:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -184, 632.5 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Name_lineEdit:rect_position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -184, 682 ) ]
+}
+
+[sub_resource type="Animation" id=23]
+resource_name = "credencials_fade_in"
+tracks/0/type = "value"
+tracks/0/path = NodePath("RegNo_label:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 0.121529, 1 ),
+"update": 0,
+"values": [ Vector2( -184, 494.5 ), Vector2( 120, 494.5 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("RegNo_lineEdit:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 0.230652, 1 ),
+"update": 0,
+"values": [ Vector2( -184, 544.5 ), Vector2( 120, 544.5 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Password_label:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.2, 0.9 ),
+"transitions": PoolRealArray( 0.121529, 1 ),
+"update": 0,
+"values": [ Vector2( -184, 780 ), Vector2( 120, 780 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Password_lineEdit:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.2, 0.9 ),
+"transitions": PoolRealArray( 0.230652, 1 ),
+"update": 0,
+"values": [ Vector2( -184, 830 ), Vector2( 120, 830 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Name_label:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.1, 0.8 ),
+"transitions": PoolRealArray( 0.121529, 1 ),
+"update": 0,
+"values": [ Vector2( -184, 632.5 ), Vector2( 120, 632.5 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Name_lineEdit:rect_position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.1, 0.8 ),
+"transitions": PoolRealArray( 0.230652, 1 ),
+"update": 0,
+"values": [ Vector2( -184, 682 ), Vector2( 120, 682 ) ]
+}
+
+[sub_resource type="DynamicFont" id=32]
+size = 23
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=33]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="DynamicFont" id=34]
+size = 20
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=35]
+bg_color = Color( 0.6, 0.6, 0.6, 0.309804 )
+
+[node name="Register" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BG_image" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Node2D29" parent="." instance=ExtResource( 8 )]
+position = Vector2( 89, 372 )
+
+[node name="Title_label" type="Label" parent="."]
+self_modulate = Color( 1, 1, 1, 0.529412 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -201.5
+margin_top = 40.0
+margin_right = 201.5
+margin_bottom = 95.0
+theme = ExtResource( 1 )
+text = "Welcome to"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Logo" type="Control" parent="Title_label"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 56.0
+margin_bottom = 209.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Title_label/Logo"]
+anchor_bottom = 1.0
+margin_left = 77.0
+margin_top = 14.0
+margin_right = 78.0
+margin_bottom = 24.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel2" type="Panel" parent="Title_label/Logo/Panel"]
+anchor_right = 1.0
+margin_bottom = 35.0
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel3" type="Panel" parent="Title_label/Logo/Panel"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -32.0
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Title_label/Logo"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = 45.0
+margin_right = 216.0
+margin_bottom = 109.0
+custom_fonts/font = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+text = "Something"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Title_label/Logo/Label"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -201.5
+margin_top = -7.0
+margin_right = 201.5
+margin_bottom = 24.0
+custom_fonts/font = SubResource( 5 )
+text = "CHAT"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Register_label" type="Label" parent="."]
+modulate = Color( 0.633529, 0.892593, 0.794725, 1 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -226.5
+margin_top = 400.0
+margin_right = 248.5
+margin_bottom = 455.0
+theme = ExtResource( 1 )
+text = "Register a New Account"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RegNo_label" type="Label" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -184.0
+margin_top = 494.5
+margin_right = -9.99982
+margin_bottom = 549.5
+theme = ExtResource( 1 )
+text = "REG NO.:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RegNo_lineEdit" type="LineEdit" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -184.0
+margin_top = 544.5
+margin_right = 302.0
+margin_bottom = 592.5
+custom_fonts/font = SubResource( 6 )
+custom_styles/focus = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+placeholder_text = "enter registeration number"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name_label" type="Label" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -184.0
+margin_top = 632.5
+margin_right = 51.0001
+margin_bottom = 687.5
+theme = ExtResource( 1 )
+text = "NAME:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name_lineEdit" type="LineEdit" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -184.0
+margin_top = 682.0
+margin_right = 302.0
+margin_bottom = 730.0
+custom_fonts/font = SubResource( 6 )
+custom_styles/focus = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+max_length = 10
+placeholder_text = "enter name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Password_label" type="Label" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -184.0
+margin_top = 780.0
+margin_right = 51.0001
+margin_bottom = 835.0
+theme = ExtResource( 1 )
+text = "PASSWORD:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Password_lineEdit" type="LineEdit" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -184.0
+margin_top = 830.0
+margin_right = 302.0
+margin_bottom = 878.0
+custom_fonts/font = SubResource( 6 )
+custom_styles/focus = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+placeholder_text = "enter password"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Register_button" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 189.0
+margin_top = 1372.0
+margin_right = 531.0
+margin_bottom = 1473.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 9 )
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/focus = SubResource( 12 )
+custom_styles/normal = SubResource( 10 )
+text = "REGISTER"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Have_acc_button" type="Button" parent="Register_button"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -102.0
+margin_top = 33.0017
+margin_right = 102.0
+margin_bottom = 74.0017
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 30 )
+custom_styles/hover = SubResource( 31 )
+custom_styles/pressed = SubResource( 31 )
+custom_styles/focus = SubResource( 31 )
+custom_styles/normal = SubResource( 31 )
+text = "Have an Account?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Notification_label" type="Label" parent="."]
+modulate = Color( 1, 0, 0, 1 )
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -368.0
+margin_top = -76.0
+margin_right = 368.0
+margin_bottom = -40.0
+custom_fonts/font = SubResource( 13 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Logo_animation" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 14 )
+anims/logo_fade_in = SubResource( 15 )
+anims/logo_lable_floating = SubResource( 16 )
+
+[node name="LineEdit_animation" type="AnimationPlayer" parent="."]
+playback_speed = 2.0
+anims/RESET = SubResource( 17 )
+anims/name_active = SubResource( 29 )
+anims/pwd_active = SubResource( 18 )
+anims/reg_active = SubResource( 19 )
+
+[node name="Button_animation" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 20 )
+anims/login_button_fade_in = SubResource( 21 )
+
+[node name="Credentials_animation" type="AnimationPlayer" parent="."]
+playback_speed = 0.91
+anims/RESET = SubResource( 22 )
+anims/credencials_fade_in = SubResource( 23 )
+
+[node name="Contact_button" type="Button" parent="."]
+modulate = Color( 0.339501, 0.72818, 0.580953, 1 )
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -119.0
+margin_top = -48.0
+margin_right = 119.0
+margin_bottom = -16.0
+custom_fonts/font = SubResource( 32 )
+custom_styles/normal = SubResource( 33 )
+text = "Contact and Feedback"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back_button" type="Button" parent="."]
+margin_right = 90.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 34 )
+custom_styles/normal = SubResource( 35 )
+icon = ExtResource( 7 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Register_request" type="HTTPRequest" parent="."]
+
+[node name="Existing_users_request" type="HTTPRequest" parent="."]
+
+[connection signal="focus_entered" from="RegNo_lineEdit" to="." method="_on_RegNo_lineEdit_focus_entered"]
+[connection signal="focus_entered" from="Name_lineEdit" to="." method="_on_Name_lineEdit_focus_entered"]
+[connection signal="focus_entered" from="Password_lineEdit" to="." method="_on_Password_lineEdit_focus_entered"]
+[connection signal="pressed" from="Register_button" to="." method="_on_Register_button_pressed"]
+[connection signal="pressed" from="Register_button/Have_acc_button" to="." method="_on_Have_acc_button_pressed"]
+[connection signal="pressed" from="Contact_button" to="." method="_on_Contact_button_pressed"]
+[connection signal="pressed" from="Back_button" to="." method="_on_Back_button_pressed"]
+[connection signal="request_completed" from="Register_request" to="." method="_on_Register_request_request_completed"]
+[connection signal="request_completed" from="Existing_users_request" to="." method="_on_Existing_users_request_request_completed"]
