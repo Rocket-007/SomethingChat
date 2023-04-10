@@ -1,0 +1,185 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Images/chat_bubble_arrow_left.png" type="Texture" id=1]
+[ext_resource path="res://Images/chat_bubble_arrow_right.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Chat_bubble/Chat_bubble.gd" type="Script" id=3]
+[ext_resource path="res://fonts/noto_sans_ui_regular.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 768, 768 )
+modulate_color = Color( 0.12549, 0.172549, 0.2, 1 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 768, 768 )
+modulate_color = Color( 0, 0.360784, 0.294118, 1 )
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0.12549, 0.172549, 0.2, 1 )
+border_color = Color( 0.254902, 0.427451, 0.266667, 1 )
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 20
+anti_aliasing = false
+
+[sub_resource type="DynamicFont" id=9]
+size = 23
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 25
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 21
+font_data = ExtResource( 4 )
+
+[sub_resource type="Animation" id=11]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "chatB_fade_in"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 9.58346, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Chat_bubble" type="Control"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 360.0
+margin_bottom = 166.0
+rect_min_size = Vector2( 360, 120 )
+mouse_filter = 2
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+ARROW = "left"
+Message = "Hi, my name is"
+
+[node name="arrow_left" type="Panel" parent="."]
+margin_left = 8.0
+margin_top = 19.5
+margin_right = 68.0
+margin_bottom = 79.5
+rect_min_size = Vector2( 60, 50 )
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="arrow_right" type="Panel" parent="."]
+visible = false
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -68.0
+margin_top = 19.5
+margin_right = -8.0
+margin_bottom = 79.5
+rect_min_size = Vector2( 60, 50 )
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bubble_margin" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -32.0
+mouse_filter = 2
+custom_constants/margin_right = 30
+custom_constants/margin_top = 20
+custom_constants/margin_left = 30
+custom_constants/margin_bottom = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bubble" type="Panel" parent="Bubble_margin"]
+margin_left = 30.0
+margin_top = 20.0
+margin_right = 330.0
+margin_bottom = 114.0
+mouse_filter = 2
+custom_styles/panel = SubResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Header" type="Label" parent="Bubble_margin/Bubble"]
+modulate = Color( 0.713726, 0.792157, 0.0980392, 1 )
+margin_left = 16.0
+margin_top = 8.0
+margin_right = 101.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 9 )
+text = "~Obinna|201903019562"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Message" type="Label" parent="Bubble_margin/Bubble"]
+anchor_right = 1.0
+margin_left = 20.0
+margin_top = 32.0
+margin_right = -30.0
+margin_bottom = 67.0
+rect_min_size = Vector2( 200, 34 )
+custom_constants/line_spacing = -10
+custom_fonts/font = SubResource( 5 )
+text = "Hi, my name is"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DateTime" type="Label" parent="Bubble_margin/Bubble"]
+modulate = Color( 0.772549, 0.772549, 0.772549, 1 )
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -226.0
+margin_top = -30.0
+margin_right = -16.0
+margin_bottom = 5.0
+grow_horizontal = 0
+custom_fonts/font = SubResource( 7 )
+text = "26/2/23    8:21 PM"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Polygon2D" type="Polygon2D" parent="Bubble_margin"]
+visible = false
+position = Vector2( 119.566, 2.84 )
+scale = Vector2( 0.283019, 0.44 )
+color = Color( 0.12549, 0.172549, 0.2, 1 )
+polygon = PoolVector2Array( 263, 39, 418, 39, 421, 40, 422, 42, 422, 44, 419, 46, 263, 164 )
+
+[node name="Fade_in_animation" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 11 )
+anims/chatB_fade_in = SubResource( 12 )
