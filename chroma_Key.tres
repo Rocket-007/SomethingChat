@@ -1,0 +1,22 @@
+[gd_resource type="Shader" format=2]
+
+[resource]
+code = "shader_type canvas_item;
+
+//Get texture and a key that we want as transparent
+uniform sampler2D Diffuse;
+uniform vec4 ChromaKey : hint_color;
+uniform vec4 resultColor : hint_color;
+
+
+void fragment(){
+    //The color value is the sampled pixel color
+    COLOR = texture(Diffuse, UV);
+
+    //If the color is the same as the chroma key, make it transparent.
+    if (COLOR == ChromaKey)
+    {
+//        COLOR.a = 0.0;
+        COLOR = resultColor;
+    }
+}"
