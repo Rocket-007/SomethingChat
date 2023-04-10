@@ -1,0 +1,330 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://Scenes/Public_chat/Public_chat.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Chat_bubble/Chat_bubble.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Images/ts7vuoswhwf41.webp" type="Texture" id=3]
+[ext_resource path="res://new_theme1.tres" type="Theme" id=4]
+[ext_resource path="res://Scenes/Public_chat/Scroll_control/Scroll_control.gd" type="Script" id=5]
+[ext_resource path="res://fonts/noto_sans_ui_regular.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Scenes/Public_chat/Bottom_panel.gd" type="Script" id=7]
+[ext_resource path="res://Images/paper-plane.png" type="Texture" id=8]
+[ext_resource path="res://sfx/d7t.ogg" type="AudioStream" id=9]
+[ext_resource path="res://Images/arrow-small-left.png" type="Texture" id=10]
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.12549, 0.172549, 0.2, 1 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 20
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=16]
+bg_color = Color( 0.6, 0.6, 0.6, 0.309804 )
+
+[sub_resource type="DynamicFont" id=18]
+size = 21
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=19]
+bg_color = Color( 0.12549, 0.172549, 0.2, 1 )
+border_width_left = 4
+border_width_top = 7
+border_width_right = 4
+border_width_bottom = 7
+border_color = Color( 0.192157, 0.45098, 0.352941, 1 )
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id=17]
+bg_color = Color( 0.309804, 0.662745, 0.529412, 1 )
+border_color = Color( 0.192157, 0.45098, 0.352941, 1 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id=20]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.0784314, 0.141176, 0.176471, 0 )
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.12549, 0.172549, 0.2, 0 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 35
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+content_margin_left = 30.0
+content_margin_right = 30.0
+content_margin_top = 19.0
+bg_color = Color( 0.12549, 0.172549, 0.2, 1 )
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id=15]
+bg_color = Color( 0.254902, 0.643137, 0.494118, 1 )
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="DynamicFont" id=5]
+size = 20
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.192157, 0.45098, 0.352941, 1 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Public_chat" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Top_panel" type="Panel" parent="VBoxContainer"]
+margin_right = 720.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 0, 70 )
+custom_styles/panel = SubResource( 7 )
+
+[node name="Button" type="Button" parent="VBoxContainer/Top_panel"]
+margin_right = 90.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 8 )
+custom_styles/normal = SubResource( 16 )
+icon = ExtResource( 10 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/Top_panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -111.5
+margin_top = -27.5
+margin_right = 111.5
+margin_bottom = 27.5
+theme = ExtResource( 4 )
+text = "Public Chat"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Top_panel"]
+visible = false
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -207.0
+margin_top = -20.0
+margin_bottom = 20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="VBoxContainer/Top_panel"]
+visible = false
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -180.0
+margin_top = -24.0
+margin_right = -24.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 18 )
+custom_styles/hover = SubResource( 19 )
+custom_styles/pressed = SubResource( 17 )
+custom_styles/focus = SubResource( 20 )
+custom_styles/normal = SubResource( 19 )
+toggle_mode = true
+text = "Active refresh"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel2" type="Panel" parent="VBoxContainer"]
+margin_top = 70.0
+margin_right = 720.0
+margin_bottom = 1180.0
+rect_min_size = Vector2( 0, 1110 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Scroll_control" type="Control" parent="VBoxContainer/Panel2/ScrollContainer"]
+margin_right = 720.0
+margin_bottom = 1380.0
+rect_min_size = Vector2( 720, 1380 )
+mouse_filter = 2
+script = ExtResource( 5 )
+
+[node name="Chat_bubble" parent="VBoxContainer/Panel2/ScrollContainer/Scroll_control" instance=ExtResource( 2 )]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -360.0
+margin_right = 0.0
+ARROW = "right"
+Message = "hi my name"
+
+[node name="Chat_bubble5" parent="VBoxContainer/Panel2/ScrollContainer/Scroll_control" instance=ExtResource( 2 )]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -440.0
+margin_top = 166.0
+margin_right = 0.0
+margin_bottom = 382.0
+ARROW = "non"
+Message = "hi my nam iokbjhb c fh j bhvghcfxfggbjkj jiljo likhydyhygik "
+
+[node name="Chat_bubble2" parent="VBoxContainer/Panel2/ScrollContainer/Scroll_control" instance=ExtResource( 2 )]
+margin_top = 382.0
+margin_right = 650.0
+margin_bottom = 823.0
+Message = "dskdljfkln  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus."
+
+[node name="Chat_bubble3" parent="VBoxContainer/Panel2/ScrollContainer/Scroll_control" instance=ExtResource( 2 )]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -440.0
+margin_top = 133.0
+margin_right = 0.0
+margin_bottom = 374.0
+ARROW = "right"
+Message = " ligula eget dolor. A dlksjnf skndlfk hnikj,skjdmofnbikjj sd
+sdfkjsdf h nosdfsdfsdgf"
+
+[node name="Chat_bubble4" parent="VBoxContainer/Panel2/ScrollContainer/Scroll_control" instance=ExtResource( 2 )]
+margin_top = 1064.0
+margin_right = 650.0
+margin_bottom = 1380.0
+Message = "dskdljfkln  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,  pede mollis pretium. Integer tincidunt. Cras dapibus."
+
+[node name="Bottom_panel" type="Panel" parent="VBoxContainer"]
+margin_top = 1180.0
+margin_right = 720.0
+margin_bottom = 1280.0
+rect_min_size = Vector2( 0, 100 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 7 )
+
+[node name="Message_textEdit" type="TextEdit" parent="VBoxContainer/Bottom_panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 34.0
+margin_top = 7.0
+margin_right = -118.0
+margin_bottom = -13.0
+rect_min_size = Vector2( 490, 80 )
+custom_colors/caret_color = Color( 0.0305235, 0.69458, 0.571875, 1 )
+custom_fonts/font = SubResource( 11 )
+custom_styles/focus = SubResource( 12 )
+custom_styles/normal = SubResource( 10 )
+text = "Message..."
+syntax_highlighting = true
+wrap_enabled = true
+caret_blink = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="VBoxContainer/Bottom_panel"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -103.0
+margin_top = -90.0
+margin_right = -16.0
+margin_bottom = -8.0
+custom_styles/panel = SubResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Send_message_button" type="Button" parent="VBoxContainer/Bottom_panel/Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -30.0
+margin_top = -28.0
+margin_right = 31.0
+margin_bottom = 28.0
+custom_fonts/font = SubResource( 5 )
+custom_styles/normal = SubResource( 4 )
+icon = ExtResource( 8 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="send_sfx" type="AudioStreamPlayer" parent="VBoxContainer/Bottom_panel"]
+stream = ExtResource( 9 )
+
+[node name="Send_message_request" type="HTTPRequest" parent="VBoxContainer/Bottom_panel"]
+
+[node name="Content_request" type="HTTPRequest" parent="."]
+
+[node name="Content_stream_request" type="HTTPRequest" parent="."]
+
+[connection signal="pressed" from="VBoxContainer/Top_panel/Button" to="." method="_on_Button_pressed"]
+[connection signal="focus_entered" from="VBoxContainer/Bottom_panel/Message_textEdit" to="VBoxContainer/Bottom_panel" method="_on_Message_textEdit_focus_entered"]
+[connection signal="pressed" from="VBoxContainer/Bottom_panel/Panel/Send_message_button" to="VBoxContainer/Bottom_panel" method="_on_Send_message_button_pressed"]
+[connection signal="request_completed" from="VBoxContainer/Bottom_panel/Send_message_request" to="VBoxContainer/Bottom_panel" method="_on_Send_message_request_request_completed"]
+[connection signal="request_completed" from="Content_request" to="." method="_on_Content_request_request_completed"]
+[connection signal="request_completed" from="Content_stream_request" to="." method="_on_Content_stream_request_request_completed"]
